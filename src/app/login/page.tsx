@@ -18,11 +18,11 @@ export default function LoginPage() {
         </div>
 
         <div className="w-full md:w-1/2 max-w-[450px] border shadow-md px-6 py-10 rounded-lg backdrop-blur-md">
-          <h1 className="text-3xl text-center">Root N Rise Login</h1>
+          <h1 className="text-3xl text-center">Root n Rise Login</h1>
           <LoginForm />
           <div>
             <p className="text-xs mt-2">
-              New to Gardenbook?{" "}
+              New to Root n Rise?{" "}
               <Link href="/signup" className="text-xs font-bold">
                 signup
               </Link>

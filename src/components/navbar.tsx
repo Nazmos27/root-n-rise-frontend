@@ -5,28 +5,30 @@ import {
   NavbarMenuToggle,
   NavbarBrand,
   NavbarItem,
-  NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
 
+import logo from "../assets/logo-transparent.png";
+
 import NavbarButtons from "./NavbarButtons";
 
 import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/theme-switch";
-import logo from "@/src/assets/logo-transparent.png";
-
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="backdrop-blur-sm">
+    <NextUINavbar
+      maxWidth="xl"
+      position="sticky"
+      className="backdrop-blur-sm fixed top-0 z-30"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Image alt="logo" className="size-8" src={logo} />
-            <p className="font-bold text-inherit">Root n Rise</p>
+            <p className="font-bold text-inherit">Gardenbook</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -67,22 +69,19 @@ export const Navbar = () => {
 
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
+          {siteConfig.navItems.map((item) => (
+            <NavbarItem key={item.href}>
+              <NextLink
+                className={clsx(
+                  linkStyles({ color: "foreground" }),
+                  "data-[active=true]:text-primary data-[active=true]:font-medium hover:underline hover:text-blue-500"
+                )}
+                color="blue"
+                href={item.href}
               >
                 {item.label}
-              </Link>
-            </NavbarMenuItem>
+              </NextLink>
+            </NavbarItem>
           ))}
         </div>
       </NavbarMenu>
