@@ -11,7 +11,7 @@ const AboutUs = () => {
         <section className=" shadow-lg rounded-lg p-8 mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-xl duration-300">
           <h2 className="text-3xl font-semibold  mb-4">Our Mission</h2>
           <p className="leading-relaxed">
-            At Gardenbook, our mission is to empower gardening enthusiasts and
+            At Root n Rise, our mission is to empower gardening enthusiasts and
             professionals alike by providing a platform to share, learn, and
             connect. We believe that gardening is not just a hobby but a way of
             life that promotes sustainability, well-being, and community

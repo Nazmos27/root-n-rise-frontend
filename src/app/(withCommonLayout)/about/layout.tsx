@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About our gardenbook. Share and explore your thoughts about gardening",
+    "About our Root n Rise. Share and explore your thoughts about gardening",
 };
 
 export default function AboutLayout({

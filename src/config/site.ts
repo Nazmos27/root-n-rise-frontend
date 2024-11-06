@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Gardenbook",
+  name: "Root n Rise",
   description: "Share and explore your thoughts about gardening",
   navItems: [
     {
