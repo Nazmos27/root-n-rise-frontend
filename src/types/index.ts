@@ -8,6 +8,7 @@ export type TUser = {
     lastName: string;
   };
   email: string;
+  bio: string;
   role: "admin" | "user";
   phone: string;
   address: string;
@@ -15,6 +16,8 @@ export type TUser = {
   planValidity: string;
   profilePhoto: string;
   coverPhoto: string;
+  totalDownvoteGained: number;
+  totalUpvoteGained: number;
   status: "active" | "blocked";
   createdAt: Date;
   updatedAt: Date;
@@ -30,8 +33,32 @@ export type TPost = {
   upvoteCount: number;
   downvoteCount: number;
   commentCount: number;
+  createdAt: string;
+  updatedAt: string;
   isDeleted: boolean;
+};
+
+export type TVote = {
+  post: string;
+  user: string;
+  type?: string;
+};
+
+export type TComment = {
+  _id: string;
+  user: TUser;
+  post: TPost;
+  comment: string;
+  upVoters: TUser[];
+  downVoters: TUser[];
+  createdAt: string;
+  updatedAt?: string;
 };
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
+};
+
+export type TQueryParam = {
+  name: string;
+  value: number | string | React.Key;
 };
