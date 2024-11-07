@@ -31,41 +31,6 @@ const AboutUs = () => {
           </p>
         </section>
 
-        {/* Team Section */}
-        <section className=" shadow-lg rounded-lg p-8 mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-xl duration-300">
-          <h2 className="text-3xl font-semibold  mb-4">Meet the Team</h2>
-          <div className="flex flex-wrap justify-around">
-            <div className="team-member  rounded-lg p-4 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 mb-6 transition-transform transform hover:-translate-y-1 hover:shadow-md duration-300">
-              <img
-                src="https://res.cloudinary.com/dbwftcxvx/image/upload/v1725594532/CEO_dkpzsn.jpg"
-                alt="Team Member 1"
-                className="rounded-md w-52 mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold text-center ">John Doe</h3>
-              <p className="text-center ">Founder & CEO</p>
-            </div>
-            <div className="team-member  rounded-lg p-4 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 mb-6 transition-transform transform hover:-translate-y-1 hover:shadow-md duration-300">
-              <img
-                src="https://res.cloudinary.com/dbwftcxvx/image/upload/v1725594532/Manager_yzjmjx.jpg"
-                alt="Team Member 2"
-                className="rounded-md w-52 mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold text-center ">Jane Smith</h3>
-              <p className="text-center ">Lead Developer</p>
-            </div>
-            <div className="team-member  rounded-lg p-4 w-full sm:w-1/3 md:w-1/4 lg:w-1/5 mb-6 transition-transform transform hover:-translate-y-1 hover:shadow-md duration-300">
-              <img
-                src="https://res.cloudinary.com/dbwftcxvx/image/upload/v1725594532/Reciptionist_aomtbm.jpg"
-                alt="Team Member 3"
-                className="rounded-md w-52 mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold text-center ">
-                Alice Johnson
-              </h3>
-              <p className="text-center">Community Manager</p>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

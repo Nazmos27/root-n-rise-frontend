@@ -13,7 +13,7 @@ interface IProps extends formConfig {
   onSubmit: SubmitHandler<any>;
 }
 
-export default function GBForm({
+export default function RnRForm({
   children,
   onSubmit,
   defaultValues,

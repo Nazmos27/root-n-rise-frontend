@@ -1,12 +1,18 @@
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
-
 import { deleteUser, followUser, unfollowUser } from "../services/User";
-import {changePassword, forgetPassword, loginUser, resetPassword, signupUser } from "../services/Auth";
-import { updateProfilePicture } from "../services/User";
-import { updateCoverPhoto } from "../services/User";
-import { updateUser } from "../services/User";
-
+import {
+  changePassword,
+  forgetPassword,
+  loginUser,
+  resetPassword,
+  signupUser,
+} from "../services/Auth";
+import {
+  updateCoverPhoto,
+  updateProfilePicture,
+  updateUser,
+} from "../services/User";
 
 export const useSignupUser = () => {
   return useMutation<any, Error, string>({

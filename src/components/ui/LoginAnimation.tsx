@@ -4,7 +4,7 @@ import React from "react";
 import Lottie from "lottie-react";
 
 import animation from "@/src/assets/loginAnimation.json";
-export default function SignupAnimation() {
+export default function LoginAnimation() {
   return (
     <div
       style={{

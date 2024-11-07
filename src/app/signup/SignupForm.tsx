@@ -6,8 +6,8 @@ import { FieldValues, SubmitHandler } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "sonner";
 
-import GBForm from "@/src/components/form/GBForm";
-import GBInput from "@/src/components/form/GBInput";
+import GBForm from "@/src/components/form/RnRForm";
+import GBInput from "@/src/components/form/RnRInput";
 import { signupSchema } from "@/src/schema";
 import { signupUser } from "@/src/services/Auth";
 

@@ -10,8 +10,8 @@ import { FaEye } from "react-icons/fa";
 import { Link } from "@nextui-org/link";
 
 import { loginSchema } from "@/src/schema";
-import GBInput from "@/src/components/form/GBInput";
-import GBForm from "@/src/components/form/GBForm";
+import GBInput from "@/src/components/form/RnRInput";
+import GBForm from "@/src/components/form/RnRForm";
 import { useUser } from "@/src/context/user.provider";
 import { useLoginUser } from "@/src/hooks/user.hook";
 

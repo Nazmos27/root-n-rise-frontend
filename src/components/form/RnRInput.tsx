@@ -12,7 +12,7 @@ interface IProps {
   name: string;
 }
 
-export default function GBInput({
+export default function RnRInput({
   variant = "bordered",
   size = "md",
   required = false,

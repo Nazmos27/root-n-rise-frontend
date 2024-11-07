@@ -1,12 +1,12 @@
 import { Link } from "@nextui-org/link";
 import LoginForm from "./LoginForm";
 import { Metadata } from "next";
-import SignupAnimation from "@/src/components/UI/SignupAnimation";
+import LoginAnimation from "@/src/components/ui/LoginAnimation";
 
 export const metadata: Metadata = {
   title: "Login",
   description:
-    "About our gardenbook. Share and explore your thoughts about gardening",
+    "About our Root n Rise. Share and explore your thoughts about gardening",
 };
 
 export default function LoginPage() {
@@ -14,7 +14,7 @@ export default function LoginPage() {
     <div className="flex justify-center items-center min-h-screen">
       <div className="flex gap-4 justify-center items-center flex-col md:flex-row my-10">
         <div className="w-full md:w-1/2">
-          <SignupAnimation />
+          <LoginAnimation />
         </div>
 
         <div className="w-full md:w-1/2 max-w-[450px] border shadow-md px-6 py-10 rounded-lg backdrop-blur-md">
