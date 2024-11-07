@@ -2,10 +2,10 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="py-12 w-full">
+    <div className="py-12 w-full pt-32">
       <div className="container mx-auto px-6">
         {/* Page Title */}
-        <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
+        <h1 className="text-5xl font-bold text-center mb-8 ">About Us</h1>
 
         {/* Mission Section */}
         <section className="shadow-lg rounded-lg p-8 mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-xl duration-300">

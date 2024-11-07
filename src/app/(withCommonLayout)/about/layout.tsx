@@ -13,7 +13,7 @@ export default function AboutLayout({
 }) {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block w-11/12 mx-auto max-w-screen-xl">
+      <div className="w-11/12 mx-auto max-w-screen-xl">
         {children}
       </div>
     </section>

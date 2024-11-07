@@ -2,6 +2,7 @@
 
 import { TPost } from "@/src/types";
 import likeImage from "@/src/assets/like.svg";
+import unlikeImage from "@/src/assets/unlike.svg";
 import commentImage from "@/src/assets/comment.svg";
 import Image from "next/image";
 import { RiShareForwardLine } from "react-icons/ri";
@@ -76,7 +77,7 @@ export default function PostCardButtons({
 
   const handleShare = (id: string) => {
     navigator.clipboard
-      .writeText(`https://gardenbook-client.vercel.app/post/${id}`)
+      .writeText(`https://root-n-rise.vercel.app/post/${id}`)
       .then(() => {
         toast.success("Post link copied to the clipboard");
       })
@@ -122,7 +123,7 @@ export default function PostCardButtons({
               disabled={isDownvotePending}
             >
               <Image
-                src={likeImage}
+                src={unlikeImage}
                 alt="vote"
                 width={40}
                 height={40}

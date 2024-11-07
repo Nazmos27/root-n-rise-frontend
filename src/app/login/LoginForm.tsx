@@ -10,10 +10,10 @@ import { FaEye } from "react-icons/fa";
 import { Link } from "@nextui-org/link";
 
 import { loginSchema } from "@/src/schema";
-import GBInput from "@/src/components/form/RnRInput";
-import GBForm from "@/src/components/form/RnRForm";
 import { useUser } from "@/src/context/user.provider";
 import { useLoginUser } from "@/src/hooks/user.hook";
+import RnRForm from "@/src/components/form/RnRForm";
+import RnRInput from "@/src/components/form/RnRInput";
 
 export interface ILoginFormProps {}
 export default function LoginForm({}: ILoginFormProps) {
@@ -44,10 +44,10 @@ export default function LoginForm({}: ILoginFormProps) {
 
   return (
     <div>
-      <GBForm onSubmit={handleSubmit} resolver={zodResolver(loginSchema)}>
-        <GBInput required label="Email" name="email" type="email" />
+      <RnRForm onSubmit={handleSubmit} resolver={zodResolver(loginSchema)}>
+        <RnRInput required label="Email" name="email" type="email" />
         <div className="relative">
-          <GBInput
+          <RnRInput
             required
             label="Password"
             name="password"
@@ -82,7 +82,7 @@ export default function LoginForm({}: ILoginFormProps) {
         >
           {isPending ? "Logging in..." : "Login"}
         </Button>
-      </GBForm>
+      </RnRForm>
     </div>
   );
 }
