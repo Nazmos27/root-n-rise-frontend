@@ -2,51 +2,57 @@
 
 import { jwtDecode } from "jwt-decode";
 import { cookies } from "next/headers";
-import { FieldValues } from "react-hook-form";
 
 import axiosInstance from "@/src/lib/AxiosInstance";
+import { revalidateTag } from "next/cache";
+import envConfig from "@/src/config/envConfig";
 
-export const signupUser = async (userData: FieldValues) => {
+export const signupUser = async (userData: string) => {
   try {
-    const { data } = await axiosInstance.post("/auth/signup", userData);
+    const { data } = await axiosInstance.post("/auth/signup", userData, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     if (data.success) {
       cookies().set("accessToken", data?.data?.accessToken);
-      cookies().set("refreshToken", data?.data?.refreshToken);
 
       return data;
     }
   } catch (error: any) {
-    // Throw the error with the response from the backend
-    if (error.response) {
-      throw new Error(JSON.stringify(error.response.data)); // Stringify the response for passing it as a string
-    }
-    throw new Error(error.message || "Something went wrong");
+    // Return the error message for notify user
+    return {
+      success: false,
+      message: error?.response?.data?.message,
+    };
   }
 };
 
-export const loginUser = async (userData: FieldValues) => {
+export const loginUser = async (userData: string) => {
   try {
-    const { data } = await axiosInstance.post("/auth/login", userData);
+    const { data } = await axiosInstance.post("/auth/login", userData, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     if (data.success) {
       cookies().set("accessToken", data?.data?.accessToken);
-      cookies().set("refreshToken", data?.data?.refreshToken);
 
       return data;
     }
   } catch (error: any) {
-    // Throw the error with the response from the backend
-    if (error.response) {
-      throw new Error(JSON.stringify(error.response.data)); // Stringify the response for passing it as a string
-    }
-    throw new Error(error.message || "Something went wrong");
+    // Return the error message for notify user
+    return {
+      success: false,
+      message: error?.response?.data?.message,
+    };
   }
 };
 
 export const logout = () => {
   cookies().delete("accessToken");
-  cookies().delete("refreshToken");
 };
 
 export const getCurrentUser = async () => {
@@ -61,4 +67,77 @@ export const getCurrentUser = async () => {
   }
 
   return decodedToken;
+};
+
+export const changePassword = async (passwordData: string): Promise<any> => {
+  try {
+    const { data } = await axiosInstance.post(
+      "/auth/change-password",
+      passwordData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    revalidateTag("user");
+
+    return data;
+  } catch (error) {
+    throw new Error("Failed to update password");
+  }
+};
+
+export const forgetPassword = async (userData: string) => {
+  try {
+    const { data } = await axiosInstance.post(
+      "/auth/forget-password",
+      userData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (data.success) {
+      return data;
+    }
+  } catch (error: any) {
+    return {
+      success: false,
+      message: error?.response?.data?.message,
+    };
+  }
+};
+
+export const resetPassword = async (
+  token: string,
+  passwordData: string
+): Promise<any> => {
+  try {
+    const fetchOption = {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: passwordData,
+    };
+
+    const res = await fetch(
+      `${envConfig.baseApi}/auth/reset-password`,
+      fetchOption
+    );
+
+    const resultLog = await res.json();
+
+    return resultLog;
+  } catch (error: any) {
+    return {
+      success: false,
+      message: "failed to reset password",
+    };
+  }
 };

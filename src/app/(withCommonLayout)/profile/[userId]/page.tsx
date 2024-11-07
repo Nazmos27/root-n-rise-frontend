@@ -1,9 +1,9 @@
 import { VerifyBadgeIcon } from "@/src/components/icons";
-import PostCard from "@/src/components/UI/PostCard/PostCard";
-import ActionButtons from "@/src/components/UI/Profile/ActionButtons";
-import ChangeCoverPhoto from "@/src/components/UI/Profile/ChangeCoverPhoto";
-import ChangeProfile from "@/src/components/UI/Profile/ChangeProfile";
-import DisplayFlowerFlowing from "@/src/components/UI/Profile/DisplayFlowerFlowing";
+import PostCard from "@/src/components/ui/PostCard/PostCard";
+import ActionButtons from "@/src/components/ui/Profile/ActionButtons";
+import ChangeCoverPhoto from "@/src/components/ui/Profile/ChangeCoverPhoto";
+import ChangeProfile from "@/src/components/ui/Profile/ChangeProfile";
+import DisplayFlowerFlowing from "@/src/components/ui/Profile/DisplayFlowerFlowing";
 import { getUserPosts } from "@/src/services/Post";
 import { getUsersFollower } from "@/src/services/User";
 import { TPost, TUser } from "@/src/types";
