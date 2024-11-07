@@ -1,10 +1,14 @@
-export interface IAdminProps {}
-export default function Admin({}: IAdminProps) {
+import React from "react";
+
+import WelcomeAnimation from "@/src/components/ui/Dashboard/WelcomeAnimation";
+
+
+export interface IDashboardProps {}
+export default function Dashboard({}: IDashboardProps) {
   return (
-    <div>
-      <h1 className="font-bold text-center text-rose-500 text-3xl">
-        This is Admin component
-      </h1>
+    <div className="">
+      <h1 className="text-3xl font-bold text-center">Gardenbook Dashboard</h1>
+      <WelcomeAnimation />
     </div>
   );
 }
