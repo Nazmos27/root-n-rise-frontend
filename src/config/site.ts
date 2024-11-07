@@ -1,11 +1,11 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Root n Rise",
+  name: "Gardenbook",
   description: "Share and explore your thoughts about gardening",
   navItems: [
     {
-      label: "Home",
+      label: "Feed",
       href: "/",
     },
     {
@@ -15,6 +15,14 @@ export const siteConfig = {
     {
       label: "About",
       href: "/about",
+    },
+    {
+      label: "Gallery",
+      href: "/latest-photos",
+    },
+    {
+      label: "Garden Plan",
+      href: "/garden-plan",
     },
   ],
   navMenuItems: [

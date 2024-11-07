@@ -1,15 +1,15 @@
-import { Metadata } from "next";
-import ForgetPasswordForm from "./ForgetPasswordForm";
 import { Link } from "@nextui-org/link";
+import { Metadata } from "next";
+import ResetPasswordForm from "./ResetPasswordForm";
 import ForgetPassAnimation from "@/src/components/ui/ForgetPassAnimation";
 
 export const metadata: Metadata = {
-  title: "Forget Password",
+  title: "Reset Password",
   description:
     "About our gardenbook. Share and explore your thoughts about gardening",
 };
 
-export default function ForgetPasswordPage() {
+export default function ResetPasswordPage() {
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="flex gap-4 justify-center items-center flex-col md:flex-row my-10">
@@ -18,18 +18,15 @@ export default function ForgetPasswordPage() {
         </div>
 
         <div className="w-full md:w-1/2 max-w-[400px] border shadow-md px-6 py-10 rounded-lg backdrop-blur-md">
-          <h1 className="text-xl text-center">Reset Your Password</h1>
+          <h1 className="text-xl text-center">
+            <span className="text-blue-400 font-bold">G</span>arden
+            <span className="text-blue-400 font-bold">B</span>ook Reset Password
+          </h1>
           <div>
-            <ForgetPasswordForm />
+            <ResetPasswordForm />
             <p className="text-sm">
-              New to Gardenbook?{" "}
-              <Link href="/signup" className="text-sm">
-                signup
-              </Link>
+              Remember password? <Link href="/login">login</Link>
             </p>
-            <Link href={"/"} className="text-sm font-bold hover:underline">
-              Return Home
-            </Link>
           </div>
         </div>
       </div>

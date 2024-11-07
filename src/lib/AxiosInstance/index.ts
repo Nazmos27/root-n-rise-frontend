@@ -1,7 +1,7 @@
 import axios from "axios";
-
 import envConfig from "@/src/config/envConfig";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 const axiosInstance = axios.create({
   baseURL: envConfig.baseApi,
@@ -28,6 +28,18 @@ axiosInstance.interceptors.response.use(
     return response;
   },
   function (error) {
+    const config = error.config;
+
+    if (error?.response?.status === 401 && !config?.sent) {
+      config.sent = true;
+
+      const cookiesStore = cookies();
+
+      cookiesStore.delete("accessToken");
+
+      redirect("/login");
+    }
+
     return Promise.reject(error);
   }
 );

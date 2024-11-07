@@ -1,4 +1,4 @@
-import UserManagementTable from "@/src/components/UI/Dashboard/UserManagementTable";
+import UserManagementTable from "@/src/components/ui/Dashboard/UsersManagementTable";
 import { getAllUsers } from "@/src/services/User";
 import { TUser } from "@/src/types";
 

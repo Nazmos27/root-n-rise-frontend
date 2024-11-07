@@ -5,32 +5,31 @@ const AboutUs = () => {
     <div className="py-12 w-full">
       <div className="container mx-auto px-6">
         {/* Page Title */}
-        <h1 className="text-4xl font-bold text-center  mb-8">About Us</h1>
+        <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
 
         {/* Mission Section */}
-        <section className=" shadow-lg rounded-lg p-8 mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-xl duration-300">
-          <h2 className="text-3xl font-semibold  mb-4">Our Mission</h2>
+        <section className="shadow-lg rounded-lg p-8 mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-xl duration-300">
+          <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
           <p className="leading-relaxed">
-            At Root n Rise, our mission is to empower gardening enthusiasts and
-            professionals alike by providing a platform to share, learn, and
-            connect. We believe that gardening is not just a hobby but a way of
-            life that promotes sustainability, well-being, and community
-            building.
+            At Root & Rise, we are dedicated to inspiring and connecting
+            gardening enthusiasts and professionals. Our mission is to provide a
+            space where people can exchange knowledge, support one another, and
+            celebrate the joy and impact of gardening as a lifestyle that
+            nurtures sustainability, health, and community.
           </p>
         </section>
 
         {/* Vision Section */}
-        <section className=" shadow-lg rounded-lg p-8 mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-xl duration-300">
-          <h2 className="text-3xl font-semibold  mb-4">Our Vision</h2>
-          <p className=" leading-relaxed">
-            Our vision is to create a global community of gardeners where
-            knowledge flows freely, innovation thrives, and a deep love for
-            nature is shared across borders. We aim to foster a space where
-            beginners and experts alike can find the resources they need to grow
-            their skills and their gardens.
+        <section className="shadow-lg rounded-lg p-8 mb-10 transition-transform transform hover:-translate-y-1 hover:shadow-xl duration-300">
+          <h2 className="text-3xl font-semibold mb-4">Our Vision</h2>
+          <p className="leading-relaxed">
+            We envision a global network of gardeners united by a shared love
+            for nature and growth. Root & Rise aims to cultivate a supportive
+            community where knowledge is accessible to all, innovation is
+            encouraged, and gardening skills flourish, empowering both beginners
+            and experts to transform their spaces.
           </p>
         </section>
-
       </div>
     </div>
   );

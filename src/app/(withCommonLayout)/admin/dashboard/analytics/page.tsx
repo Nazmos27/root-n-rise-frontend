@@ -1,6 +1,6 @@
-import PaymentChart from "@/src/components/Analytics/PaymentChart";
-import PostActivityCart from "@/src/components/Analytics/PostActivity";
-import UserActivityChart from "@/src/components/Analytics/UserActivity";
+import PaymentChart from "@/src/components/analytics/PaymentChart";
+import PostActivityCart from "@/src/components/analytics/PostActivity";
+import UserActivityChart from "@/src/components/analytics/UserActivity";
 import { getMonthlyPosts } from "@/src/services/Post";
 import { getActiveUsers, getMonthlyPayments } from "@/src/services/User";
 

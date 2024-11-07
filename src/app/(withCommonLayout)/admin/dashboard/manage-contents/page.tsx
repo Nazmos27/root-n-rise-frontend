@@ -1,4 +1,4 @@
-import ContentManagementTable from "@/src/components/UI/Dashboard/ContentManagementTable";
+import ContentManagementTable from "@/src/components/ui/Dashboard/ContentManagementTable";
 import { getAllPosts } from "@/src/services/Post";
 import { TPost } from "@/src/types";
 

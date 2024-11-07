@@ -3,7 +3,6 @@
 import { TComment } from "@/src/types";
 import { getTimeFromNow } from "@/src/utils/getTimeFromNow";
 import Link from "next/link";
-import GBForm from "../../form/RnRForm";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CommentSchema } from "@/src/schema";
 import { IoIosSend } from "react-icons/io";

@@ -6,10 +6,7 @@ import SignupForm from "./SignupForm";
 const Singnup = () => {
   return (
     <div style={{ maxWidth: "400px", margin: "0 auto", padding: "2rem" }}>
-      <h1 className="text-3xl text-center">
-        <span className="text-blue-400 font-bold">G</span>arden
-        <span className="text-blue-400 font-bold">B</span>ook Signup
-      </h1>
+      <h1 className="text-3xl text-center">Root n Rise <span className="text-green-500">Sign Up</span></h1>
       <SignupForm />
       <div>
         <p className="text-sm">
